@@ -4,7 +4,7 @@
         <li (click)="navigateToHome()"><a>Home</a></li>
         <li (click)="navigateToAboutUs()"><a>About Us</a></li>
         <li (click)="navigateToContactUs()"><a>Contact Us</a></li>
-        <li (click)="navigateToLogin()"><a>User</a></li>
+        <li (click)="navigateToUser()"><a>User</a></li>
       </ul>
     </nav>
   </header>
@@ -12,10 +12,10 @@
   <main>
 
     <div [ngSwitch]="currentComponent">
-        <app-home *ngSwitchCase="'home'"></app-home>
-        <app-login *ngSwitchCase="'login'"></app-login>
-        <app-aboutus *ngSwitchCase="'aboutUs'"></app-aboutus>
-        <app-contactus *ngSwitchCase="'contactUs'"></app-contactus>
+        <app-home *ngSwitchCase="navBarConstant.HOME"></app-home>
+        <app-login *ngSwitchCase="navBarConstant.USERS"></app-login>
+        <app-aboutus *ngSwitchCase="navBarConstant.ABOUTUS"></app-aboutus>
+        <app-contactus *ngSwitchCase="navBarConstant.CONTACTUS"></app-contactus>
     </div>
     
   </main>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NAVBAR } from '../../constants/AuthConstants';
 
 @Component({
   selector: 'app-auth',
@@ -7,23 +8,27 @@ import { Component } from '@angular/core';
 })
 export class AuthComponent {
 
-  currentComponent="home";
 
-  navigateToLogin(){
-    this.currentComponent="login";
+  
+  navBarConstant=NAVBAR;
+
+  currentComponent=this.navBarConstant.HOME;
+
+  navigateToUser(){
+    this.currentComponent=NAVBAR.USERS;
   }
 
   navigateToHome(){
-    this.currentComponent="home";
+    this.currentComponent=NAVBAR.HOME;
   }
 
 
   navigateToAboutUs(){
-    this.currentComponent="aboutUs";
+    this.currentComponent=NAVBAR.ABOUTUS;
   }
 
   navigateToContactUs(){
-    this.currentComponent="contactUs";
+    this.currentComponent=NAVBAR.CONTACTUS;
   }
 
 }
