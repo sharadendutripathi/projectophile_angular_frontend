@@ -1,0 +1,24 @@
+ 
+  <main>
+    <div class="login-container">
+      <h1>Login</h1>
+      <form (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="number">Mobile Number</label>
+          <input type="text" id="number" name="number" required [(ngModel)]="phoneNumber">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required [(ngModel)]="password">
+        </div>
+        <div class="form-group">
+          <button type="submit">Login</button>
+        </div>
+        <div class="form-group">
+          <button type="button" (click)="goToSignup()">Sign Up</button>
+          <a routerLink="/forgot-password">Forgot Password?</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  
