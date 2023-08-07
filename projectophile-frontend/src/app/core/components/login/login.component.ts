@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +7,18 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  phoneNumber: string | undefined;
-  password: string | undefined;
 
-  constructor(private router: Router) {}
 
-  login(): void {
-    // Add your login logic here
-    console.log('Login button clicked');
+  phoneNumber: string = '';
+  password: string = '';
+
+  onLogin() {
+    // Implement your login logic here
+    console.log('Logging in with phone number:', this.phoneNumber, 'and password:', this.password);
   }
 
-  goToSignup(): void {
-    this.router.navigate(['/signup']);
+  onSignUp() {
+    // Implement your sign-up logic here
+    console.log('Signing up with phone number:', this.phoneNumber, 'and password:', this.password);
   }
 }

@@ -30,6 +30,6 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
     AppRoutingModule,
     FormsModule
   ],
-  exports:[AuthComponent]
+  exports:[AuthComponent, SignupComponent, ForgotPasswordComponent]
 })
 export class CoreModule { }

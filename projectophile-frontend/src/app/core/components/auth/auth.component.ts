@@ -7,28 +7,26 @@ import { NAVBAR } from '../../constants/AuthConstants';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent {
-
-
   
   navBarConstant=NAVBAR;
 
   currentComponent=this.navBarConstant.HOME;
 
   navigateToUser(){
-    this.currentComponent=NAVBAR.USERS;
+    this.currentComponent=this.navBarConstant.USERS;
   }
 
   navigateToHome(){
-    this.currentComponent=NAVBAR.HOME;
+    this.currentComponent=this.navBarConstant.HOME;
   }
 
 
   navigateToAboutUs(){
-    this.currentComponent=NAVBAR.ABOUTUS;
+    this.currentComponent=this.navBarConstant.ABOUTUS;
   }
 
   navigateToContactUs(){
-    this.currentComponent=NAVBAR.CONTACTUS;
+    this.currentComponent=this.navBarConstant.CONTACTUS;
   }
 
 }
