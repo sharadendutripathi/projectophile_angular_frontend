@@ -1,0 +1,56 @@
+.signup-page{
+background-image: url("../../../../assets/images/signupPageBackground.jpg");
+height: 500px;
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  
+    h2 {
+      margin-bottom: 20px;
+    }
+  
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      input {
+        width: 300px;
+        padding: 10px;
+        margin: 5px 0;
+      }
+  
+      button {
+        margin: 10px 0;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+  
+      .register-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .register-button {
+            background-color: #28a745;
+            margin-top: 20px;
+      
+            &:hover {
+              background-color: #1f8042;
+            }
+          }
+      }
+      
+    }
+  }
+}
+  

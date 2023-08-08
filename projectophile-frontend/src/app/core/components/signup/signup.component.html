@@ -1,1 +1,21 @@
-<p>signup works!</p>
+<div class="signup-page">
+
+<div class="signup-container">
+    <h2>Sign Up</h2>
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" placeholder="Mobile Number" (keydown)="handleNumberInput($event)" appNumericInput required>
+      <input type="email" placeholder="Email" [(ngModel)]="email" required>
+      <input type="password" placeholder="Password" (keydown)="handlePasswordInput($event)" required>
+  
+      <button [disabled]="disableVerifyNumber" type="button" (click)="showOtpInput()">Verify Number</button>
+      
+      <div *ngIf="showOtp">
+        <input type="text" placeholder="Enter OTP here" [(ngModel)]="otp">
+        <div class="register-div">
+            <button class="register-button" type="button" (click)="verifyAndRegister()">Verify and Register</button>
+        </div>
+      </div>
+  
+    </form>
+  </div>
+  </div>
