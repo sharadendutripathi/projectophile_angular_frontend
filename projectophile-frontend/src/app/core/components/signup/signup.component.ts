@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent {
-  number: string ="";
-  email: string="";
-  password: string="";
-  otp: string="";
+  number: string = '';
+  email: string = '';
+  password: string = '';
+  otp: string = '';
   showOtp: boolean = false;
-  disableVerifyNumber:boolean=true;
-  
+  disableVerifyNumber: boolean = true;
 
   showOtpInput() {
     // Simulate sending OTP and show OTP input
-    console.log(this.number+","+this.password);
-    if( this.number.length===10 && this.password.length>=8){
+    console.log(this.number + ',' + this.password);
+    if (this.number.length === 10 && this.password.length >= 8) {
       this.showOtp = true;
     }
-    
   }
 
   verifyAndRegister() {
@@ -35,12 +34,11 @@ export class SignupComponent {
     // Handle form submission if needed
   }
 
-
   handleNumberInput(event: KeyboardEvent) {
     const inputElement = event.target as HTMLInputElement;
     const currentInput = inputElement.value;
     const key = event.key;
-    this.number=currentInput;
+    this.number = currentInput;
     // Allow only numeric keys, backspace, and delete
     if (!/^\d$/.test(key) && key !== 'Backspace' && key !== 'Delete') {
       event.preventDefault();
@@ -52,18 +50,26 @@ export class SignupComponent {
     }
   }
 
+  handleEmailInput(event: KeyboardEvent) {
+    const inputElement = event.target as HTMLInputElement;
+    const currentInput = inputElement.value;
+    this.password = currentInput;
+
+    // Allow only a maximum of 10 digits
+    if (this.number.length === 10 && this.password.length >= 8) {
+      this.disableVerifyNumber = false;
+    }
+  }
 
   handlePasswordInput(event: KeyboardEvent) {
     const inputElement = event.target as HTMLInputElement;
     const currentInput = inputElement.value;
     const key = event.key;
-    this.password=currentInput;
+    this.password = currentInput;
 
     // Allow only a maximum of 10 digits
-    if (this.number.length===10 && this.password.length>=8 ) {
-      this.disableVerifyNumber=false;
+    if (this.number.length === 10 && this.password.length >= 8) {
+      this.disableVerifyNumber = false;
     }
   }
-
-
 }

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AUTHAPI } from '../../constants/AuthConstants';
 
@@ -18,7 +18,8 @@ export class AuthService {
   }
 
   verifyUser(data:any){
-    return this.http.post(AUTHAPI.baseURL+AUTHAPI.AUTHENTICATEUSER, data);
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    return this.http.post(AUTHAPI.baseURL+AUTHAPI.AUTHENTICATEUSER, data, {headers});
   }
 
 }
