@@ -19,7 +19,7 @@ export const ROUTES = {
   ADMIN: '/admin',
 };
 
-export const USERROLES = {
+export const USERROLE = {
   ADMIN: 'ADMIN',
   MENTOR: 'MENTOR',
   STUDENT: 'STUDENT',

@@ -46,7 +46,7 @@ export class StorageService {
     localStorage.setItem(this.USERROLE, userRole);
   }
 
-  getUserRole(): any | null {
+  getUserRole(): string | null {
     return localStorage.getItem(this.USERROLE);
   }
 
