@@ -8,6 +8,12 @@ import { AUTHAPI } from '../../constants/AuthConstants';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
+  isAuthenticated(): boolean {
+    // Implement your authentication logic here
+    // Return true if the user is authenticated, otherwise false
+    return false;
+  }
+
   registerStudent(data: any) {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(AUTHAPI.baseURL + AUTHAPI.REGISTERSTUDENT, data, {
@@ -26,7 +32,7 @@ export class AuthService {
     return this.http.post(AUTHAPI.CRETAEMENTOR, data);
   }
 
-  verifyUser(data: any) {
+  verifyUser(data: any): any {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     return this.http.post(AUTHAPI.baseURL + AUTHAPI.AUTHENTICATEUSER, data, {
       headers,

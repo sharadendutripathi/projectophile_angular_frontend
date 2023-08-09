@@ -12,14 +12,10 @@ import { AdminComponent } from './features/admin/admin.component';
     AppComponent,
     StudentComponent,
     MentorComponent,
-    AdminComponent
+    AdminComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    CoreModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, CoreModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
